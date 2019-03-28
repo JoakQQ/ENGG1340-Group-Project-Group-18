@@ -12,7 +12,7 @@ the store. The system must be dynamic with the amount of customers and be able t
 on the store managers want to add items for sells or delete items for shortage or other needs.
 
 # Problem Statement
-*The main problems the system as follow:*
+*The main problems of the system as follow:*
 1. The system should find the **maximum profit** which is the *cost of good sold* minus the *running costs of cashiers*.
 2. The system should find a way to **minimize the customers leaving the store** (*customers will leave wait more than 15 mins at the register*).
 3. The system is **dynamic**, it will be updated at an **1-minute time interval**. Thus, the waiting time for each customer will change    along with the system time. Therefore, the system should have the abilities to **measure the changing time variables** which the    customers at the end of the line will wait.
