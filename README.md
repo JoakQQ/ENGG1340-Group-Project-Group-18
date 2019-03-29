@@ -3,15 +3,15 @@
 
 **Project Topic: Cash Register system (_Lavender_)**
 
-# Problem Setting
-**_Lavender_** is a grocery store selling a large variety of items for customers. The time customers spending at register is varying with 
-the amount of item they are buying. The customers with grocery will wait in a line before the 4 cashiers in the store. If the customers 
-waited too long for the register, they will leave without buying anything. Thus, it is unavoidable if the waiting line is too long. With 
-the expense of each cashiers runnung at *$60 per hour* (*$1 per minute*). A cash register system is in need for maximizing the profits of 
+## Problem Setting
+**_Lavender_** is a grocery store selling a large variety of items for customers. The time customers spend at register is varying with 
+the amount of item they get. The customers with groceries will wait in a line in front of 4 cashiers in the store. If the customers 
+wait too long for the register, they will leave without buying anything. Thus, it is unavoidable if the waiting line is too long. With 
+the expense of each cashiers runnung at *$60 per hour* (*$1 per minute*), a cash register system is needed for maximizing the profits of 
 the store. The system must be dynamic with the amount of customers and be able to change its grocery list from time to time, depending 
-on the store managers want to add items for sells or delete items for shortage or other needs.
+on the store managers want to add items for sells or delete items in shortage.
 
-# Problem Statements
+## Problem Statements
 *The problem statements are listed below:*
 1. **Maximum profit** need to be found.
 2. Customer leaves the store if they wait more than *15 mins*.
@@ -20,12 +20,12 @@ on the store managers want to add items for sells or delete items for shortage o
 5. The ways of generating random cases for testing.
 6. The way of calculating the **processing time** for each customer as different customer can have **different quantity of grocery**.
 
-# Program Features
+## Program Features
 *The main features of the system as follow:*
 1. The system should find the **maximum profit** which is the *cost of good sold* minus the *running costs of cashiers*.
 2. The system should find a way to **minimize the customers leaving the store** (*customers will leave wait more than 15 mins at the register*).
 3. The system is **dynamic**, it will be updated at an **1-minute time interval**. Thus, the waiting time for each customer will change    along with the system time. Therefore, the system should have the abilities to **measure the changing time variables** which the    customers at the end of the line will wait.
-4.**The number of cashiers opened** in order to maximize the profit need to be decided as follow:
+4. **The number of cashiers opened** in order to maximize the profit need to be decided as follow:
     - **one** cashier is opened if the overall waiting time of the line is **less than 15 minutes**.
     - **two** cashiers are opened if the overall waiting time of the line is **between 15 to 30 minutes**.
     - **three** cashiers are opened if the overall waiting time of the line is **between 30 to 45 minutes**.
