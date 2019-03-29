@@ -11,8 +11,17 @@ the expense of each cashiers runnung at *$60 per hour* (*$1 per minute*). A cash
 the store. The system must be dynamic with the amount of customers and be able to change its grocery list from time to time, depending 
 on the store managers want to add items for sells or delete items for shortage or other needs.
 
-# Problem Statement
-*The main problems of the system as follow:*
+# Problem Statements
+*The problem statements are listed below:*
+1. **Maximum profit** need to be found.
+2. Customer leaves the store if they wait more than *15 mins*.
+3. It is a **dynamic system**. The waiting time for each customer will change over time.
+4. The number of cashier opened in order to **maximize the profit** need to be decided. We cannot open all the cashier as each cashier costs money when running.
+5. The ways of generating random cases for testing.
+6. The way of calculating the **processing time** for each customer as different customer can have **different quantity of grocery**.
+
+# Program Features
+*The main features of the system as follow:*
 1. The system should find the **maximum profit** which is the *cost of good sold* minus the *running costs of cashiers*.
 2. The system should find a way to **minimize the customers leaving the store** (*customers will leave wait more than 15 mins at the register*).
 3. The system is **dynamic**, it will be updated at an **1-minute time interval**. Thus, the waiting time for each customer will change    along with the system time. Therefore, the system should have the abilities to **measure the changing time variables** which the    customers at the end of the line will wait.
