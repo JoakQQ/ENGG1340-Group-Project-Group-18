@@ -14,7 +14,7 @@ void ReadFile(string a[], int b[], int c[]){
 	while(getline(fin,line)){
 		string x;
 		istringstream iss;
-		iss.str(line);
+		iss.str(line," ");
 		iss >> a[i];
 		iss >> x;
 		b[i] = atoi (x.c_str());
