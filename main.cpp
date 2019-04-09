@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 #include <ctime>
+#include "ReadFile.cpp"
 
 using namespace std;
 
 const int MAXGOODS = 100;
+const int MAX = 100;
 
 class Customers{
 public:
@@ -41,6 +42,8 @@ int timeofline(Customer S[],){
 
 }
 int main(){
-	int timeofline;
-	int num = calculateRegisters(timeofline);
+	string Goods[MAX];
+	int profitsGoods[MAX], timesGoods[MAX];
+	ReadFile(Goods, profitsGoods, timesGoods);
+	return 0;
 }
