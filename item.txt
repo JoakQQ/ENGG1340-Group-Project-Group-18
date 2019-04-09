@@ -1,0 +1,4 @@
+items profits times
+Apple 2 1
+Banana 1 2
+Pear 2 1
