@@ -6,8 +6,6 @@
 
 using namespace std;
 
-const int MAX = 100;
-
 int calculateRegisters(time){
 	
 }
@@ -19,8 +17,8 @@ int timeofline(Customer S[],){
 
 }
 int main(){
-	string Goods[MAX];
-	int profitsGoods[MAX], timesGoods[MAX];
+	string Goods[MAXGOODS];
+	int profitsGoods[MAXGOODS], timesGoods[MAXGOODS];
 	ReadFile(Goods, profitsGoods, timesGoods);
 	return 0;
 }
