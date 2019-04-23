@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-#include "ReadFile.h"
-#include "Customer.h"
+#include "ReadFile.h" // Read file: ReadFile()
+#include "Customer.h" // Customer Class: Goods[], num_Goods[], printCustomer(), length()
 
 using namespace std;
 
