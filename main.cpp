@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-#include "ReadFile.cpp"
+#include "ReadFile.h"
 #include "Customer.h"
 
 using namespace std;
