@@ -1,11 +1,4 @@
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-
-using namespace std;
-
-const int MAX = 100;
+#include "ReadFile.h"
 
 void ReadFile(string a[], int b[], int c[]){
 	ifstream fin("item.txt");
@@ -23,11 +16,4 @@ void ReadFile(string a[], int b[], int c[]){
 		i++;
 	}
 	fin.close();
-}
-
-int main(){
-	string Goods[MAX];
-	int profitsGoods[MAX], timesGoods[MAX];
-	ReadFile(Goods, profitsGoods, timesGoods);
-	return 0;
 }
