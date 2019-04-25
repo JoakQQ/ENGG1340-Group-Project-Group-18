@@ -1,3 +1,6 @@
+#ifndef _READFILE_
+#define _READFILE_
+
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -7,3 +10,5 @@ using namespace std;
 
 
 void ReadFile(string a[], int b[], int c[]);
+
+#endif
