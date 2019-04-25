@@ -1,13 +1,22 @@
-#include <string>
+#ifndef _CUSTOMER_CLASS_
+#define _CUSTOMER_CLASS_
+
 #include <iostream>
+#include <string>
+#include "List.h"
 using namespace std;
-const int MAXGOODS = 100;
 
 class Customer
 {
 public:
-    string Goods[MAXGOODS];
-    int num_Goods[MAXGOODS];
+    string_node *Goods = NULL;
+    int_node *num_Goods = NULL;
     int length();
     void printCustomer();
+    void append_Goods(string info);
+    void append_num_Goods(int info);
+    string value_Goods(int count);
+    int value_num_Goods(int count);
 };
+
+#endif
