@@ -1,18 +1,33 @@
 #include "Customer.h"
 
 int Customer::length(){
-	int i = 0;
-	while (num_Goods[i] != '\0'){
-		i++;
-		if(i == MAXGOODS){
-			break;
-		}
+	int count = 0;
+	int_node *p = num_Goods;
+	while (p != NULL){
+		p = p->next;
+		count++;
 	}
-	return i;
+	return count;
 }
 
 void Customer::printCustomer(){
 	for (int i = 0; i < length(); i++){
-		cout << Goods[i] << " : " << num_Goods[i] << endl;
+		cout << value_string_node(Goods, i) << " : " << value_int_node(num_Goods, i) << endl;
 	}
+}
+
+void Customer::append_Goods(string input){
+	append_string_list(Goods, input);
+}
+
+void Customer::append_num_Goods(int input){
+	append_int_list(num_Goods, input);
+}
+
+string Customer::value_Goods(int count){
+	return value_string_node(Goods, count);
+}
+
+int Customer::value_num_Goods(int count){
+	return value_int_node(num_Goods, count);
 }
