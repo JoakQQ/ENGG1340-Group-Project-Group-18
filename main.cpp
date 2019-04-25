@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include "List.h"
 #include "ReadFile.h" // Read file: ReadFile()
-#include "Customer.h" // Customer Class: Goods[], num_Goods[], printCustomer(), length(), const int MAXGOODS
-
+#include "Customer.h" // Customer Class
 using namespace std;
 
 int calculateRegisters(time){
