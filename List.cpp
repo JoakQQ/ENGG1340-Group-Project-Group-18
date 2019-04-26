@@ -80,3 +80,29 @@ int value_int_node(int_node *head, int count){
 	}
 	return target;
 }
+
+bool find_string_value(string_node *head, string target){
+	string_node *p = head;
+	while(p != NULL){
+		if (p->info == target){
+			return 1;
+		}
+		p = p->next;
+	}
+	return 0;
+}
+
+int find_num_list(string_node *string_head, int_node *int_head, string target){
+	int num = 0;
+	string_node *p = string_head;
+	int_node *c = int_head;
+	while(p != NULL){
+		if (p->info == target){
+			num = c->info;
+			break;
+		}
+		p = p->next;
+		c = c->next;
+	}
+	return  num;
+}
