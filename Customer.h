@@ -17,6 +17,8 @@ public:
     void append_num_Goods(int info);
     string value_Goods(int count);
     int value_num_Goods(int count);
+    bool find_Goods(string target);
+    int find_num_Goods(string target);
 };
 
 #endif
