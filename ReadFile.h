@@ -9,6 +9,6 @@
 using namespace std;
 
 
-void ReadFile(string a[], int b[], int c[]);
+void ReadFile(string a[], int b[], int c[], int num);
 
 #endif
