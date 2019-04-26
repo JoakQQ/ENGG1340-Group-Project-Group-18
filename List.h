@@ -29,4 +29,8 @@ string value_string_node(string_node *head, int count);
 
 int value_int_node(int_node *head, int count);
 
+bool find_string_value(string_node *head, string target);
+
+int find_num_list(string_node *string_head, int_node *int_head, string target);
+
 #endif
