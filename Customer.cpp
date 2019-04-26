@@ -31,3 +31,10 @@ string Customer::value_Goods(int count){
 int Customer::value_num_Goods(int count){
 	return value_int_node(num_Goods, count);
 }
+
+bool Customer::find_Goods(string target){
+	return find_string_value(Goods, target)
+}
+int Customer::find_num_Goods(string target){
+	return find_num_list(Goods, num_Goods, target);
+}
