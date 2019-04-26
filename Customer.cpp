@@ -7,6 +7,7 @@ int Customer::length(){
 		p = p->next;
 		count++;
 	}
+	delete p;
 	return count;
 }
 
@@ -33,7 +34,7 @@ int Customer::value_num_Goods(int count){
 }
 
 bool Customer::find_Goods(string target){
-	return find_string_value(Goods, target)
+	return find_string_value(Goods, target);
 }
 int Customer::find_num_Goods(string target){
 	return find_num_list(Goods, num_Goods, target);
