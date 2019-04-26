@@ -1,6 +1,6 @@
 #include "ReadFile.h"
 
-void ReadFile(string a[], int b[], int c[]){
+void ReadFile(string a[], int b[], int c[], int &num){
 	ifstream fin("item.txt");
 	string line;
 	int i=0;
@@ -16,4 +16,5 @@ void ReadFile(string a[], int b[], int c[]){
 		i++;
 	}
 	fin.close();
+	num = i;
 }
