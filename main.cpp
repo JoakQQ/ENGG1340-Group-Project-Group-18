@@ -70,7 +70,7 @@ int main(){
 	for (int i = 0; i < num_Register; i++){
 		cout << "Number of customer at register "  << i + 1 << " : " << num_Customer_in_line[i] << endl;
 	}
-	for (int i = 4 - num_Register - 1; i <= 4; i++){
+	for (int i = num_Register + 1; i <= 4; i++){
 		cout << "Register " << i << " is currently closed." << endl;
 	}
 	cout << endl;
