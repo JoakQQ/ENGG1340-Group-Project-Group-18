@@ -1,36 +1,109 @@
-#ifndef _CUSTOMERIZED_LIST_
-#define _CUSTOMERIZED_LIST_
-
-#include <string>
-#include <iostream>
+#include "List.h"
 using namespace std;
 
-struct string_node
-{
-	string info;
-	string_node *next;
-};
+void append_string_list(string_node *&head, string input){
+	string_node *p = new string_node;
+	p->info = input;
+	p->next = NULL;
+	string_node *c = head;
+	if (head == NULL){
+		head = p;
+	}
+	else{
+		while (c->next != NULL){
+			c = c->next;
+		}
+		c->next = p;
+	}
+}
 
-struct int_node
-{
-	int info;
-	int_node *next;
-};
+void append_int_list(int_node *&head, int input){
+	int_node *p = new int_node;
+	p->info = input;
+	p->next = NULL;
+	int_node *c = head;
+	if (head == NULL){
+		head = p;
+	}
+	else{
+		while (c->next != NULL){
+			c = c->next;
+		}
+		c->next = p;
+	}
+}
 
-void append_string_list(string_node *&head, string info);
+void print_string_list(string_node *head){
+	string_node *p = head;
+	while (p != NULL){
+		cout << p->info << endl;
+		p = p->next;
+	}
+}
 
-void append_int_list(int_node *&head, int info);
+void print_int_list(int_node *head){
+	int_node *p = head;
+	while (p != NULL){
+		cout << p->info << endl;
+		p = p->next;
+	}
+}
 
-void print_string_list(string_node *head);
+string value_string_node(string_node *head, int count){
+	int current = 0;
+	string target = "-1";
+	string_node *p = head;
+	while (p != NULL && current <= count){
+		if (count == current){
+			target = p->info;
+			break;
+		}
+		else{
+			p = p->next;
+			count--;
+		}
+	}
+	return target;
+}
 
-void print_int_list(int_node *head);
+int value_int_node(int_node *head, int count){
+	int target = -1, current = 0;
+	int_node *p = head;
+	while (p != NULL && current <= count){
+		if (count == current){
+			target = p->info;
+			break;
+		}
+		else{
+			p = p->next;
+			count--;
+		}
+	}
+	return target;
+}
 
-string value_string_node(string_node *head, int count);
+bool find_string_value(string_node *head, string target){
+	string_node *p = head;
+	while(p != NULL){
+		if (p->info == target){
+			return 1;
+		}
+		p = p->next;
+	}
+	return 0;
+}
 
-int value_int_node(int_node *head, int count);
-
-bool find_string_value(string_node *head, string target);
-
-int find_num_list(string_node *string_head, int_node *int_head, string target);
-
-#endif
+int find_num_list(string_node *string_head, int_node *int_head, string target){
+	int num = 0;
+	string_node *p = string_head;
+	int_node *c = int_head;
+	while(p != NULL){
+		if (p->info == target){
+			num = c->info;
+			break;
+		}
+		p = p->next;
+		c = c->next;
+	}
+	return num;
+}
