@@ -47,16 +47,17 @@ void sort_line(Customer S[], int num, Customer **ARR, int ARR_x){
 }
 
 void cut_line(Customer ARR[], int &length, int &left, string Goods[], int timesGoods[], int num_items){
-	int t = 0, iteration;
+	int t = 0, iteration = 0;
 	for (int i = 0; i < length; i++){
 		t += Customer_time(ARR[i], Goods, timesGoods, num_items);
 		if (t > 15 * 60){
 			iteration = i + 1;
 			break;
 		}
+		iteration++;
 	}
 	left += (length - iteration);
-	length -= iteration;
+	length -= left;
 }
 
 int Customer_Profit(Customer S, string Goods[], int profitsGoods[], int num_items){
