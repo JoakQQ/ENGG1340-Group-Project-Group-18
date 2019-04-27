@@ -34,4 +34,4 @@ test:test.o Customer.o List.o File_IO.o
 	$(CXX) -c $<
 	
 clean_test:
-	rm main main.o function.o File_IO.o Customer.o List.o log.txt testing.txt
+	rm test.o testing.txt
