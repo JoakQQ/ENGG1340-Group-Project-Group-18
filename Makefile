@@ -31,7 +31,7 @@ test.o:test.cpp Customer.h List.h File_IO.h
 	$(CXX) -c $<
 
 test:test.o Customer.o List.o File_IO.o
-	$(CXX) -c $<
+	$(CXX) -o test test.o Customer.o List.o File_IO.o
 	
 clean_test:
 	rm test.o testing.txt
