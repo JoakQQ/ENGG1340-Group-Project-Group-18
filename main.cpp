@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "List.h"	  //customerized list
-#include "ReadFile.h" // Read file: ReadFile()
+#include "File_IO.h" // Read file: ReadFile()
 #include "Customer.h" // Customer Class
 #include "function.h"
 using namespace std;
@@ -18,14 +18,14 @@ int main(){
 	cin >> num_Customer;
 	Customer *customer_arr = new Customer [num_Customer]();
 	for (int i = 0; i < num_Customer; i++){
-		cout << "Customer " << i + 1 << " :" << endl;
+		cout << "----- Customer " << i + 1 << " -----" << endl;
 		cout << "Please input types of item you want to buy: ";
 		cin >> item_Customer;
 		for (int j = 0; j < item_Customer; j++){
-			cout << "item name " << j + 1 << " : ";
+			cout << "Name of item " << j + 1 << " : ";
 			cin >> item_name;
 			customer_arr[i].append_Goods(item_name);
-			cout << "how many item " << j + 1 << " you brought : ";
+			cout << "Number of item " << j + 1 << " : ";
 			cin >> item_Brought;
 			customer_arr[i].append_num_Goods(item_Brought);
 		}
@@ -51,7 +51,32 @@ int main(){
 	int num_Customer_left = 0;
 	double total_profit;
 	total_profit = calculate_Profit(Register_line, num_Customer_in_line, num_Register, num_Customer_left, Goods, timesGoods, profitsGoods, num_items);
-	cout << "Maximized Profit: " << total_profit << endl;
+	
+	cout << "\nMaximized Profit: " << total_profit << "\n\n";
+
+	if (num_Customer_left > 0){
+		if (num_Customer_left > 1){
+			cout << "There are " << num_Customer_left << " customers leaving." << endl;
+		}
+		else{
+			cout << "There is 1 customer leaving." << endl;
+		}
+	}
+	else{
+		cout << "There is no customer leaving." << endl;
+	}
+	cout << endl;
+
+	for (int i = 0; i < num_Register; i++){
+		cout << "Number of customer at register "  << i + 1 << " : " << num_Customer_in_line[i] << endl;
+	}
+	for (int i = 4 - num_Register - 1; i <= 4; i++){
+		cout << "Register " << i << " is currently closed." << endl;
+	}
+	cout << endl;
+
+	WriteINFO(Register_line, num_Customer_in_line, num_Register);
+	cout << "*The data log is wrote to \"log.txt\" file." << endl;
 
 	for (int i = 0; i < num_Register; i++){
 		delete [] Register_line[i];
