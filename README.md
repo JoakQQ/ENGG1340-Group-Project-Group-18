@@ -31,3 +31,12 @@ on the store managers want to add items for sells or delete items in shortage.
 4. The system can generate at least 50 customers for **testing purpose**.
 5. The system is able to **calculate the processing time** for each customer by **reading the grocery list including prices**, and the list can be **assessed** for adding or deleting grocery when needed.
 6. The system is implemented with dynamic memory management.
+7. The system includes the linked list, class and dynamic 2D array.
+## Instruction Menue
+"Testing Case":
+1. Download the zipped file and unzip the file.
+2. Open up the terminal and put all the files inside the terminal.
+3. Type the command ```cd Downloads/ENGG1340-Group-Project-Group-18--master/```.
+4. Type the command ```make main``` ```make test```
+5. 
+5. 
