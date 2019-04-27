@@ -4,7 +4,6 @@
 #include "ReadFile.h" // Read file: ReadFile()
 #include "Customer.h" // Customer Class
 #include "function.h"
-
 using namespace std;
 
 const int MAXGOODS = 100;
@@ -17,24 +16,48 @@ int main(){
 	string item_name;
 	cout << "Please input number of customer waiting in line: ";
 	cin >> num_Customer;
-	Customer *customer_arr = new Customer[num_Customer]();
+	Customer *customer_arr = new Customer [num_Customer]();
 	for (int i = 0; i < num_Customer; i++){
 		cout << "Customer " << i + 1 << " :" << endl;
 		cout << "Please input types of item you want to buy: ";
 		cin >> item_Customer;
 		for (int j = 0; j < item_Customer; j++){
-			cout << "item name " << i + 1 << " : ";
+			cout << "item name " << j + 1 << " : ";
 			cin >> item_name;
 			customer_arr[i].append_Goods(item_name);
-			cout << "how many item " << i + 1 << " you brought : ";
+			cout << "how many item " << j + 1 << " you brought : ";
 			cin >> item_Brought;
 			customer_arr[i].append_num_Goods(item_Brought);
 		}
 	}
-	int num_Register, num_Customer_left, time;
-	num_Register = calculateRegisters(timeofline(customer_arr, num_Customer, Goods, timesGoods, num_items));
-	num_Customer_left = find_Customer_left(customer_arr, num_Customer, Goods, timesGoods, num_items, time);
-	
-	delete[] customer_arr;
+	int num_Register;
+	num_Register = calculateRegisters(customer_arr, num_Customer, Goods, timesGoods, num_items);
+	int num_Customer_line;
+	Customer ** Register_line = new Customer * [num_Register];
+	int *num_Customer_in_line = new int [num_Register]();
+	for (int i = 0; i < num_Customer % num_Register; i++){
+		num_Customer_line = num_Customer / num_Register + 1;
+		Register_line[i] = new Customer [num_Customer_line];
+		num_Customer_in_line[i] = num_Customer_line;
+	}
+	for (int i = num_Customer % num_Register; i < num_Register; i++){
+		num_Customer_line = num_Customer / num_Register;
+		Register_line[i] = new Customer [num_Customer_line];
+		num_Customer_in_line[i] = num_Customer_line;
+	}
+
+	sort_line(customer_arr, num_Customer, Register_line, num_Register);
+
+	int num_Customer_left = 0;
+	double total_profit;
+	total_profit = calculate_Profit(Register_line, num_Customer_in_line, num_Register, num_Customer_left, Goods, timesGoods, profitsGoods, num_items);
+	cout << "Maximized Profit: " << total_profit << endl;
+
+	for (int i = 0; i < num_Register; i++){
+		delete [] Register_line[i];
+	}
+	delete [] Register_line;
+	delete [] num_Customer_in_line;
+	delete [] customer_arr;
 	return 0;
 }
