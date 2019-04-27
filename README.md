@@ -34,7 +34,8 @@ on the store managers want to add items for sells or delete items in shortage.
 7. The system includes the linked list, class and dynamic 2D array.
 
 ## Compilation and Execution Instruction Menue
-"Testing Case":
+
+### Testing Case
 1. Download the zipped file and unzip the file.
 2. Open up the terminal and put all the files inside the terminal.
 3. Type the command ```cd Downloads/ENGG1340-Group-Project-Group-18--master/```.
@@ -43,7 +44,8 @@ on the store managers want to add items for sells or delete items in shortage.
 6. Input the number of customer.
 7. Type the command ```./main < testing.txt```.
 8. Type the command ```clean_main```, ```clean_test```.
-"Real Case":
+
+### Real Case
 1. Download the zipped file and unzip the file.
 2. Open up the terminal and put all the files inside the terminal.
 3. Type the command ```cd Downloads/ENGG1340-Group-Project-Group-18--master/```.
