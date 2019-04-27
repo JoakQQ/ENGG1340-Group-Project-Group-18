@@ -4,7 +4,7 @@
 #include "ReadFile.h" // Read file: ReadFile()
 #include "Customer.h" // Customer Class
 #include "function.h"
-#include "test.h"
+
 using namespace std;
 
 const int MAXGOODS = 100;
