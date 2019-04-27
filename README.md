@@ -33,6 +33,12 @@ on the store managers want to add items for sells or delete items in shortage.
 6. The system is implemented with dynamic memory management.
 7. The system includes the linked list, class and dynamic 2D array.
 
+## Functionalities
+1. The program is able to calculate the maximum profit a grocery stroe can earn with the limited registers and the running cost of registers.
+2. The program can find the number of the customers who will leave the store as they wait more than 15 minutes.
+3. The program can count the number of customers in each register.
+4. The program can determine the number of registers opened to maximize the profit and meet the demand of customers.
+
 ## Compilation and Execution Instruction Menue
 
 ### Testing Case
