@@ -6,9 +6,12 @@
 #include <sstream>
 #include <cstdlib>
 
+#include "Customer.h"
 using namespace std;
 
 
 void ReadFile(string a[], int b[], int c[], int &num);
+
+void WriteINFO(Customer **ARR, int length[], int ARR_x);
 
 #endif
