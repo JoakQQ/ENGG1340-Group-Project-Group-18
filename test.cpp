@@ -10,6 +10,7 @@ const int MAXGOOD=100;
 int main(){
   string Goods[MAXGOOD];
   int b[MAXGOOD],c[MAXGOOD],num,NO;
+  cout << "Number of customer: ";
   cin>> NO;
   Customer *s = new Customer [NO];
   int x=0;
@@ -47,6 +48,7 @@ int main(){
           fout<< s[i].value_Goods(j)<< " "<< s[i].value_num_Goods(j)<< endl;
       }
   }
+  cout << "*The test case is generated and put into the \"testing.txt\" file." << endl;
   delete []s;
   fout.close();
   return 0;
