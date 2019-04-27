@@ -52,7 +52,7 @@ int main(){
 	double total_profit;
 	total_profit = calculate_Profit(Register_line, num_Customer_in_line, num_Register, num_Customer_left, Goods, timesGoods, profitsGoods, num_items);
 	
-	cout << "\nMaximized Profit: " << total_profit << "\n\n";
+	cout << "\n\nMaximized Profit: " << total_profit << "\n\n";
 
 	if (num_Customer_left > 0){
 		if (num_Customer_left > 1){
