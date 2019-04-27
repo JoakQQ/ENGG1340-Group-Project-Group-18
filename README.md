@@ -57,7 +57,14 @@ on the store managers want to add items for sells or delete items in shortage.
 
 ## Input/Output Specification
 
-### Test Case 1 (testing program)
+### Test Case 1 (manual mode)
+#### Input
+
+#### Output
+
+#### log.txt
+
+### Test Case 2 (testing mode)
 #### Input
 ![image](https://i.imgur.com/ERPqSHv.png)
 ![image](https://i.imgur.com/L2eSSSG.png)
