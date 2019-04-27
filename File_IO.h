@@ -1,5 +1,5 @@
-#ifndef _READFILE_
-#define _READFILE_
+#ifndef _File_IO_
+#define _File_IO_
 
 #include <string>
 #include <fstream>
