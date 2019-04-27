@@ -7,7 +7,6 @@ int Customer::length(){
 		p = p->next;
 		count++;
 	}
-	delete p;
 	return count;
 }
 
