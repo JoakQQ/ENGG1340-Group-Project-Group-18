@@ -39,20 +39,21 @@ on the store managers want to add items for sells or delete items in shortage.
 1. Download the zipped file and unzip the file.
 2. Open up the terminal and put all the files inside the terminal.
 3. Type the command ```cd Downloads/ENGG1340-Group-Project-Group-18--master/```.
-4. Type the command ```make main```,then ```make test```.
-5. Type the command ```./test```.
+4. Type the command ```make main```,then ```make test``` to compile the main.cpp and test.cpp files to main and test files.
+5. Type the command ```./test``` to execute the test program.
 6. Input the number of customer.
-7. Type the command ```./main < testing.txt```.
-8. Type the command ```clean_main```, ```clean_test```.
+7. Type the command ```./main < testing.txt``` to test the program.
+8. Type the command ```clean_main```, ```clean_test``` to clean up the object and text files.
 
 ### Real Case
 1. Download the zipped file and unzip the file.
 2. Open up the terminal and put all the files inside the terminal.
 3. Type the command ```cd Downloads/ENGG1340-Group-Project-Group-18--master/```.
-4. Type the command ```make main```.
-5. Input the number of customer.
-6. Input the number of types of item a customer will buy, name of items, quantity of the item, repeat the above steps for each customer.  
-7. Type the command ```clean_main```.
+4. Type the command ```make main``` to compile the main.cpp to main file.
+5. Type the command ```./main``` to execute the program.
+6. Input the number of customer.
+7. Input the number of types of item a customer will buy, name of items, quantity of the item, repeat the above steps for each customer. 
+8. Type the command ```clean_main``` to clean up the object and text files.
 
 ## Input/Output Specification
 
