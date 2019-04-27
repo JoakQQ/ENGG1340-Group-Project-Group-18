@@ -10,7 +10,7 @@ Chicken 10 2
 Pork 5 3
 Beef 4 2
 Fish 4 2
-Shirmp 3 1
+Shrimp 3 1
 Egg 4 1
 Noolde 2 1
 Rice 5 1
@@ -35,7 +35,7 @@ Sugar 1 2
 Vinegar 2 2
 Cracker 3 2
 Biscuit 2 1
-Toewl 2 1
+Towel 2 1
 Tissue 1 1
 Tooth_brusher 2 2
 Coal 3 3
