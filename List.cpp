@@ -1,5 +1,4 @@
 #include "List.h"
-using namespace std;
 
 void append_string_list(string_node *&head, string input){
 	string_node *p = new string_node;
@@ -15,7 +14,6 @@ void append_string_list(string_node *&head, string input){
 		}
 		c->next = p;
 	}
-	delete c;
 }
 
 void append_int_list(int_node *&head, int input){
@@ -32,25 +30,6 @@ void append_int_list(int_node *&head, int input){
 		}
 		c->next = p;
 	}
-	delete c;
-}
-
-void print_string_list(string_node *head){
-	string_node *p = head;
-	while (p != NULL){
-		cout << p->info << endl;
-		p = p->next;
-	}
-	delete p;
-}
-
-void print_int_list(int_node *head){
-	int_node *p = head;
-	while (p != NULL){
-		cout << p->info << endl;
-		p = p->next;
-	}
-	delete p;
 }
 
 string value_string_node(string_node *head, int count){
@@ -67,7 +46,6 @@ string value_string_node(string_node *head, int count){
 			count--;
 		}
 	}
-	delete p;
 	return target;
 }
 
@@ -84,7 +62,6 @@ int value_int_node(int_node *head, int count){
 			count--;
 		}
 	}
-	delete p;
 	return target;
 }
 
@@ -96,7 +73,6 @@ bool find_string_value(string_node *head, string target){
 		}
 		p = p->next;
 	}
-	delete p;
 	return 0;
 }
 
@@ -112,7 +88,5 @@ int find_num_list(string_node *string_head, int_node *int_head, string target){
 		p = p->next;
 		c = c->next;
 	}
-	delete p;
-	delete c;
 	return num;
 }
