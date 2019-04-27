@@ -30,3 +30,4 @@ on the store managers want to add items for sells or delete items in shortage.
     - **four** cashiers are opened if the overall waiting time of the line is **more than 45 minutes**.
 4. The system can generate at least 50 customers with random groceries at random time interval for **testing purpose**.
 5. The system is able to **calculate the processing time** for each customer by **reading the grocery list including prices**, and the list can be **assessed** for adding or deleting grocery when needed.
+6. The system is implemented with dynamic memory management.
