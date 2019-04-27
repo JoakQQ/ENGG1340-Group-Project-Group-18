@@ -17,12 +17,12 @@ int calculateRegisters(Customer S[], int num, string Goods[], int time[], int nu
 	}
 	int num_Register = 1;
 	if (t >= 15 * 60 && t < 30 * 60){
-		if (!(t - Customer_time(S[num - 1], Goods, time, num_Of_Goods) >= 15)){
+		if (!(t - Customer_time(S[num - 1], Goods, time, num_Of_Goods) >= 15 * 60)){
 			num_Register = 2;
 		}
 	}
 	else if (t >= 30 * 60 && t < 45 * 60){
-		if (t - Customer_time(S[num - 1], Goods, time, num_Of_Goods) - Customer_time(S[num - 2], Goods, time, num_Of_Goods) >= 30){
+		if (t - Customer_time(S[num - 1], Goods, time, num_Of_Goods) - Customer_time(S[num - 2], Goods, time, num_Of_Goods) >= 30 * 60){
 			num_Register = 3;
 		}
 		else{
@@ -30,7 +30,7 @@ int calculateRegisters(Customer S[], int num, string Goods[], int time[], int nu
 		}
 	}
 	else if (t >= 45 * 60){
-		if (t - Customer_time(S[num - 1], Goods, time, num_Of_Goods) - Customer_time(S[num - 2], Goods, time, num_Of_Goods) - Customer_time(S[num - 3], Goods, time, num_Of_Goods) >= 45){
+		if (t - Customer_time(S[num - 1], Goods, time, num_Of_Goods) - Customer_time(S[num - 2], Goods, time, num_Of_Goods) - Customer_time(S[num - 3], Goods, time, num_Of_Goods) >= 45 * 60){
 			num_Register = 4;
 		}
 		else{
