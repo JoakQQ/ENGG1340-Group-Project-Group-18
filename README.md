@@ -59,11 +59,12 @@ on the store managers want to add items for sells or delete items in shortage.
 
 ### Test Case 1 (manual mode)
 #### Input
-
+![image](https://i.imgur.com/glGrJaM.png)
+![image](https://i.imgur.com/CXPoLbG.png)
 #### Output
-
+![image](https://i.imgur.com/B8jYgkn.png)
 #### log.txt
-
+![image](https://i.imgur.com/4M4i4OM.png)
 ### Test Case 2 (testing mode)
 #### Input
 ![image](https://i.imgur.com/ERPqSHv.png)
