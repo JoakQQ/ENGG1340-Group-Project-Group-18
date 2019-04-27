@@ -64,4 +64,7 @@ on the store managers want to add items for sells or delete items in shortage.
 ![image](https://i.imgur.com/IsYMynE.png)
 #### Output
 ![image](https://i.imgur.com/x5pHQBV.png)
-
+#### testing.txt
+![image](https://i.imgur.com/oMZ0Rw1.png)
+#### log.txt
+![image](https://i.imgur.com/Qa3C6jn.png) ![image](https://i.imgur.com/srVCWnB.png)
