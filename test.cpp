@@ -7,19 +7,30 @@ void test(){
   int x=0;
   ReadFile(Goods,b,c,num);
   for(int i=0;i<50;++i){
-      srand(time(0)+x);
-      int mAx= rand()%3;
-      int n=0;
-      while (n<=mAx){
-          int a = rand()% num;
-          int b = rand()% 10+1;
-          s[i].append_Goods(Goods[a]);
-          s[i].append_num_Goods(b);
-          ++x;
-          ++n;
-      }
-
+    srand(time(0)+x);
+    int mAx= rand()%3;
+    int n=0;
+    int p[3]={-1,-1,-1};
+    while (n<=mAx){
+        int ct=0;
+        ++x;
+        ++n;
+        int a = rand()% num;
+        int b = rand()% 10+1;
+        for(int j=0;j<3;++j){
+            if(p[j]==a){
+                ct=1;
+            }
+        }
+        if(ct==0){
+            cout << "attend " << i+1 << endl;
+            s[i].append_Goods(Goods[a]);
+            s[i].append_num_Goods(b);
+        }
+        p[n]=a;
+    }
   }
+
   ofstream fout;
   fout.open("testing.txt");
   fout<< 50<< endl;
@@ -30,5 +41,5 @@ void test(){
       }
   }
   fout.close();
-}
+  }
 
