@@ -1,6 +1,13 @@
-#include "test.h"
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include "Customer.h"
+#include "ReadFile.h"
+using namespace std;
 
-void test(){
+int main(){
   string Goods[50];
   int b[50],c[50],num;
   Customer s[50];
@@ -41,5 +48,6 @@ void test(){
       }
   }
   fout.close();
-  }
+  return 0;
+}
 
